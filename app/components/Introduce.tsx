@@ -1,8 +1,9 @@
 import Image from 'next/image';
+import CommonContainer from './CommonContainer';
 
 function Introduce() {
   return (
-    <div className='flex items-start flex-col justify-center min-h-screen'>
+    <>
       <div className='relative w-48 h-48 rounded-full overflow-hidden self-center'>
         <Image
           src='/img/R0000814webp.webp'
@@ -22,7 +23,7 @@ function Introduce() {
           stack
         </p>
       </div>
-    </div>
+    </>
   );
 }
 

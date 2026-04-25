@@ -1,10 +1,10 @@
-import Introduce from './components/Introduce';
+import Introduce from '@/app/components/Introduce';
 
 function Home() {
   return (
-    <div>
+    <>
       <Introduce />
-    </div>
+    </>
   );
 }
 
