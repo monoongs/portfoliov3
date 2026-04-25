@@ -1,5 +1,11 @@
+import Introduce from './components/Introduce';
+
 function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <Introduce />
+    </div>
+  );
 }
 
 export default Home;
