@@ -14,6 +14,7 @@ function Introduce() {
           src='/img/R0000814webp.webp'
           alt='introduce'
           fill
+          sizes='192px'
           className='object-cover'
         />
       </div>
