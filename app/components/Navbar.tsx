@@ -1,4 +1,4 @@
-import React from 'react';
+import { Button } from '@/components/ui/button';
 
 function Navbar() {
   return (
@@ -7,9 +7,9 @@ function Navbar() {
         <h1 className='text-md font-bold'>NATTAPON.DEV</h1>
       </div>
       <div>
-        <button className='border-2 border-black rounded-full px-4 py-2 hover:bg-black hover:text-white transition-all duration-300 ease-in-out'>
-          <h2 className='text-xs font-bold'>Get In Touch</h2>
-        </button>
+        <Button variant='outline' className='rounded-full text-xs font-bold'>
+          Get In Touch
+        </Button>
       </div>
     </div>
   );
