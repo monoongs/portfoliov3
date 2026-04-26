@@ -1,4 +1,4 @@
-import Config from '@/app/config';
+import { experience as Config } from '@/app/config';
 import CommonCarousel from '@/app/components/CommonCarousel';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';

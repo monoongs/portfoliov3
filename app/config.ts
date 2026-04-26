@@ -13,7 +13,14 @@ export type Experience = {
   order: number;
 };
 
-const experience: Record<string, Experience> = {
+export type Profile = {
+  name: string;
+  email: string;
+  github: string;
+  linkedin: string;
+};
+
+export const experience: Record<string, Experience> = {
   bedrock: {
     id: 'bedrock',
     images: ['/images/bedrockjob.webp', '/images/bedrockjob1.webp'],
@@ -139,4 +146,9 @@ const experience: Record<string, Experience> = {
   },
 };
 
-export default experience;
+export const profile: Profile = {
+  name: 'Nattapon Srivithayarat',
+  email: 'monoongs@gmail.com',
+  github: 'https://github.com/monoongs',
+  linkedin: 'https://www.linkedin.com/in/nattapon-srivithayarat/',
+};

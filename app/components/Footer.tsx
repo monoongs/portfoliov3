@@ -1,5 +1,5 @@
-import React from 'react';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { profile } from '@/app/config';
 
 function Footer() {
   return (
@@ -10,27 +10,17 @@ function Footer() {
         </h4>
         <p className='text-xl font-bold uppercase'>DROP ME A MESSAGE AT</p>
         <p className='text-xl font-semibold underline uppercase mt-2'>
-          monoongs@gmail.com
+          {profile.email}
         </p>
         <div className='flex gap-4 mt-4'>
-          <a
-            href='https://www.linkedin.com/in/nattapon-srivilai'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
+          <a href={profile.linkedin} target='_blank' rel='noopener noreferrer'>
             <FaLinkedin size={28} className='text-black' />
           </a>
-          <a
-            href='https://github.com/nattapon-dev'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
+          <a href={profile.github} target='_blank' rel='noopener noreferrer'>
             <FaGithub size={28} className='text-black' />
           </a>
         </div>
-        <h5 className='text-4xl uppercase font-bold mt-4'>
-          Nattapon Srivithayarat
-        </h5>
+        <h5 className='text-4xl uppercase font-bold mt-4'>{profile.name}</h5>
       </div>
     </div>
   );

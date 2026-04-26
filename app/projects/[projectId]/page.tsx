@@ -1,4 +1,4 @@
-import experience from '@/app/config';
+import { experience } from '@/app/config';
 import CommonCarousel from '@/app/components/CommonCarousel';
 import { notFound } from 'next/navigation';
 import BackButton from '@/app/components/BackButton';
