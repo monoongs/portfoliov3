@@ -12,8 +12,17 @@ import { Experience } from '@/app/config';
 type CommonDialogProps = Omit<Experience, 'id' | 'highlights'>;
 
 function CommonDialog(props: CommonDialogProps) {
-  const { images, title, company, period, years, months, tools, description } =
-    props;
+  const {
+    images,
+    title,
+    company,
+    period,
+    years,
+    months,
+    tools,
+    description,
+    responsibilities,
+  } = props;
 
   return (
     <Dialog>
@@ -52,9 +61,16 @@ function CommonDialog(props: CommonDialogProps) {
             ))}
           </div>
 
-          <p className='text-sm text-muted-foreground leading-relaxed'>
-            {description}
-          </p>
+          <p className='text-sm'>{description}</p>
+
+          <h3 className='text-lg font-semibold'>Responsibilities</h3>
+          <ul className='list-disc pl-4'>
+            {responsibilities.map((responsibility, i) => (
+              <li key={i}>
+                <p>{responsibility}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </DialogContent>
     </Dialog>

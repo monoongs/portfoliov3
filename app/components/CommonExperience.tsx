@@ -1,7 +1,8 @@
 import Config from '@/app/config';
 import CommonCarousel from '@/app/components/CommonCarousel';
 import { Badge } from '@/components/ui/badge';
-import CommonDialog from '@/app/components/CommonDialog';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 type CommonExperienceProps = {
   experienceId: string;
@@ -33,7 +34,14 @@ function CommonExperience({ experienceId }: CommonExperienceProps) {
           </ul>
         </div>
 
-        <CommonDialog {...experience} />
+        <Link href={`/projects/${experience.id}`}>
+          <Button
+            variant='outline'
+            className='rounded-full text-xs font-bold w-full'
+          >
+            View Project
+          </Button>
+        </Link>
       </div>
     </div>
   );

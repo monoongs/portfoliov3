@@ -9,6 +9,7 @@ export type Experience = {
   tools: string[];
   highlights: string[];
   description: string;
+  responsibilities: string[];
 };
 
 const experience: Record<string, Experience> = {
@@ -28,6 +29,14 @@ const experience: Record<string, Experience> = {
     ],
     description:
       'LocalGov is a multi-tenant web portal for government organizations, supporting RBAC management and integration with multiple internal services. Built with Next.js, Elysia, PostgreSQL, Redis, and Kafka — responsible for both frontend and backend, including feature development, asynchronous workflows, and cross-system integration.',
+    responsibilities: [
+      'Built LocalGov Platform, a multi-tenant government system supporting multiple organizations with centralized user and role management.',
+      'Implemented asynchronous workflows using Kafka and the outbox pattern (via Debezium), improving scalability and service decoupling.',
+      'Implemented backend APIs using Node.js (NestJS) and Bun (Elysia) to support internal services and cross-application integration.',
+      'Optimized system performance using Redis for caching and session management, reducing database load and improving response times.',
+      'Translated Figma designs into reusable UI components (e.g., tables, pagination, forms) and implemented performance optimizations such as lazy loading.',
+      'Developed the frontend and integration layer for an asynchronous file ingestion pipeline, including upload handling, status tracking, and consuming Kafka events to update the UI.',
+    ],
   },
 };
 
