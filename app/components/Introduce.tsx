@@ -8,31 +8,33 @@ function Introduce() {
 
   const experience = differenceInYears(today, startWorkDate);
   return (
-    <div className='flex flex-col gap-6'>
-      <div className='relative w-48 h-48 rounded-full overflow-hidden self-center'>
-        <Image
-          src='/images/R0000814webp.webp'
-          alt='introduce'
-          fill
-          sizes='192px'
-          className='object-cover'
-        />
-      </div>
-      <div>
-        <h1 className='text-4xl font-bold'>{`Nattapon
+    <div className='flex items-start flex-col justify-center min-h-screen'>
+      <div className='flex flex-col gap-6'>
+        <div className='relative w-48 h-48 rounded-full overflow-hidden self-center'>
+          <Image
+            src='/images/R0000814webp.webp'
+            alt='introduce'
+            fill
+            sizes='192px'
+            className='object-cover'
+          />
+        </div>
+        <div>
+          <h1 className='text-4xl font-bold'>{`Nattapon
         Srivithayarat`}</h1>
-      </div>
+        </div>
 
-      <div className='flex items-center gap-2'>
-        <Badge variant='outline'>Nest.js</Badge>
-        <Badge variant='outline'>Next.js</Badge>
-        <Badge variant='outline'>TypeScript</Badge>
-      </div>
+        <div className='flex items-center gap-2'>
+          <Badge variant='outline'>Nest.js</Badge>
+          <Badge variant='outline'>Next.js</Badge>
+          <Badge variant='outline'>TypeScript</Badge>
+        </div>
 
-      <p className='font-medium uppercase'>
-        Software Engineer with {experience}+ years of experience building
-        scalable web applications using modern tech stack
-      </p>
+        <p className='font-medium uppercase'>
+          Software Engineer with {experience}+ years of experience building
+          scalable web applications using modern tech stack
+        </p>
+      </div>
     </div>
   );
 }

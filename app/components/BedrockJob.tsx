@@ -1,4 +1,4 @@
-import Carousel from '@/app/components/Carousel';
+import CommonCarousel from '@/app/components/CommonCarousel';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import {
@@ -15,7 +15,7 @@ const slides = ['/images/bedrockjob.webp', '/images/bedrockjob1.webp'];
 function BedrockJob() {
   return (
     <div className='flex flex-col gap-6 w-full'>
-      <Carousel slides={slides} />
+      <CommonCarousel slides={slides} />
 
       <div className='flex flex-col gap-4'>
         <h1 className='font-bold text-xl'>Senior Full Stack Developer</h1>
@@ -79,7 +79,7 @@ function BedrockDialog() {
           </DialogTitle>
         </DialogHeader>
         <div className='flex flex-col gap-4'>
-          <Carousel slides={slides} />
+          <CommonCarousel slides={slides} />
           <div>
             <h2 className='text-lg font-bold'>
               Bedrock Analytics (AI and Robotics Ventures)

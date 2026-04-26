@@ -1,16 +1,11 @@
-import BedrockJob from '@/app/components/BedrockJob';
-import CommonContainer from '@/app/components/CommonContainer';
+import CommonExperience from '@/app/components/CommonExperience';
 import Introduce from '@/app/components/Introduce';
 
 function Home() {
   return (
     <>
-      <CommonContainer>
-        <Introduce />
-      </CommonContainer>
-      <CommonContainer>
-        <BedrockJob />
-      </CommonContainer>
+      <Introduce />
+      <CommonExperience experienceId='bedrock' />
     </>
   );
 }

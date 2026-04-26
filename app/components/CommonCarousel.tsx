@@ -8,9 +8,13 @@ import {
 } from '@/components/ui/carousel';
 import { cn } from '@/lib/utils';
 
-type Slides = string[];
-
-function Carousel({ slides, className }: { slides: Slides; className?: string }) {
+function CommonCarousel({
+  slides,
+  className,
+}: {
+  slides: string[];
+  className?: string;
+}) {
   return (
     <CarouselUI className={cn('w-full', className)}>
       <CarouselContent>
@@ -33,4 +37,4 @@ function Carousel({ slides, className }: { slides: Slides; className?: string })
   );
 }
 
-export default Carousel;
+export default CommonCarousel;
