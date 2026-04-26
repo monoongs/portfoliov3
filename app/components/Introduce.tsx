@@ -11,7 +11,7 @@ function Introduce() {
     <div className='flex flex-col gap-6'>
       <div className='relative w-48 h-48 rounded-full overflow-hidden self-center'>
         <Image
-          src='/img/R0000814webp.webp'
+          src='/images/R0000814webp.webp'
           alt='introduce'
           fill
           sizes='192px'
