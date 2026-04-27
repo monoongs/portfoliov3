@@ -30,9 +30,9 @@ export default function RootLayout({
       lang='en'
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className='min-h-full flex flex-col bg-gray-100'>
+      <body className='min-h-full flex flex-col bg-gray-100 overflow-x-hidden'>
         <div className='max-w-3xl mx-auto'>
-          <div className='bg-white shadow-xl'>
+          <div className='bg-white shadow-[20px_0_25px_-5px_rgb(0_0_0/0.1),-20px_0_25px_-5px_rgb(0_0_0/0.1)] [clip-path:inset(0_-30px)]'>
             <div className='px-10'>
               <Navbar />
               {children}
