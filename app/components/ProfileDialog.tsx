@@ -35,7 +35,9 @@ function ProfileContent() {
     <div className='flex flex-col'>
       <div className='flex mt-5 gap-10 justify-center'>
         <div className='flex flex-col items-center gap-1'>
-          <FiDownload size={iconSize} />
+          <Link href={profile.cvUrl} target='_blank' rel='noopener noreferrer'>
+            <FiDownload size={iconSize} className='text-black' />
+          </Link>
           <span className='text-xs font-bold uppercase'>Get my CV</span>
         </div>
 

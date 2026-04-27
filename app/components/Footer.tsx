@@ -18,7 +18,14 @@ function Footer() {
         </Link>
         <div className='flex gap-4 mt-5 items-center'>
           <Button variant='outline' className='rounded-full text-xs font-bold'>
-            <FiDownload size={16} /> GET MY CV
+            <Link
+              href={profile.cvUrl}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='flex items-center gap-2'
+            >
+              <FiDownload size={16} /> GET MY CV
+            </Link>
           </Button>
 
           <div className='w-px h-6 bg-gray-500' />

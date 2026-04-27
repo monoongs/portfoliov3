@@ -18,6 +18,7 @@ export type Profile = {
   email: string;
   github: string;
   linkedin: string;
+  cvUrl: string;
 };
 
 export const experience: Record<string, Experience> = {
@@ -151,4 +152,6 @@ export const profile: Profile = {
   email: 'nattapon.srivi@gmail.com',
   github: 'https://github.com/monoongs',
   linkedin: 'https://www.linkedin.com/in/nattapon-srivithayarat/',
+  cvUrl:
+    'https://drive.google.com/file/d/1DJ2CJTHrfgWHRo8Rvum00eh6NtnFcmtN/view?usp=sharing',
 };
