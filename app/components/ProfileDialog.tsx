@@ -19,7 +19,7 @@ function ProfileDialog() {
           Get In Touch
         </Button>
       </DialogTrigger>
-      <DialogContent className='max-w-2xl bg-white'>
+      <DialogContent className='bg-white md:max-w-2xl'>
         <DialogHeader>
           <DialogTitle>&nbsp;</DialogTitle>
         </DialogHeader>
@@ -66,7 +66,9 @@ function ProfileContent() {
           <span className='text-xs font-bold uppercase'>Github</span>
         </div>
       </div>
-      <h5 className='text-4xl uppercase font-bold mt-5'>{profile.name}</h5>
+      <div className='flex md:justify-center'>
+        <h5 className='text-4xl uppercase font-bold mt-5'>{profile.name}</h5>
+      </div>
     </div>
   );
 }

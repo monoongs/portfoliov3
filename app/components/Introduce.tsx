@@ -19,12 +19,12 @@ function Introduce() {
             className='object-cover'
           />
         </div>
-        <div>
+        <div className='md:self-center'>
           <h1 className='text-4xl font-bold'>{`Nattapon
         Srivithayarat`}</h1>
         </div>
 
-        <div className='flex items-center gap-2'>
+        <div className='flex items-center gap-2 md:self-center md:my-4 text-base'>
           <Badge variant='outline'>Nest.js</Badge>
           <Badge variant='outline'>Next.js</Badge>
           <Badge variant='outline'>TypeScript</Badge>
