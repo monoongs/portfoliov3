@@ -3,13 +3,13 @@
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 
-function BackButton() {
+function BackButton({ className }: { className?: string }) {
   const router = useRouter();
 
   return (
     <Button
       variant='outline'
-      className='rounded-full text-xs font-bold w-full'
+      className={`rounded-full text-xs font-bold ${className}`}
       onClick={() => router.back()}
     >
       Back

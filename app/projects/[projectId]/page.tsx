@@ -26,7 +26,7 @@ async function ProjectPage({
   } = project;
 
   return (
-    <div className='flex flex-col gap-6 w-full max-w-2xl mx-auto pt-28 pb-10'>
+    <div className='flex flex-col gap-6 w-full pt-28 pb-10'>
       <CommonCarousel slides={images} />
 
       <div>
@@ -65,8 +65,7 @@ async function ProjectPage({
           ))}
         </ul>
       </div>
-
-      <BackButton />
+      <BackButton className='w-full' />
     </div>
   );
 }
