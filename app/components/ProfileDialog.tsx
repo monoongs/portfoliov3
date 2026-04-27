@@ -33,7 +33,7 @@ function ProfileContent() {
   const iconSize = 40;
   return (
     <div className='flex flex-col'>
-      <div className='flex mt-5 gap-10 justify-center'>
+      <div className='flex mt-5 gap-9 justify-center'>
         <div className='flex flex-col items-center gap-1'>
           <Link href={profile.cvUrl} target='_blank' rel='noopener noreferrer'>
             <FiDownload size={iconSize} className='text-black' />
