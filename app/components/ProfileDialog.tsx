@@ -19,7 +19,10 @@ function ProfileDialog() {
           Get In Touch
         </Button>
       </DialogTrigger>
-      <DialogContent className='bg-white md:max-w-2xl'>
+      <DialogContent
+        className='bg-white md:max-w-2xl'
+        aria-describedby={undefined}
+      >
         <DialogHeader>
           <DialogTitle>&nbsp;</DialogTitle>
         </DialogHeader>
