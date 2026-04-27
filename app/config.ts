@@ -49,7 +49,7 @@ export const experience: Record<string, Experience> = {
   },
   sabuy: {
     id: 'sabuy',
-    images: [],
+    images: ['/images/sabuylogo.png'],
     title: 'Senior Developer ( Backend Focus )',
     company: 'SABUY Solutions Co., Ltd.',
     period: '2023 Sep - 2023 Dec',
@@ -70,7 +70,7 @@ export const experience: Record<string, Experience> = {
   },
   ptt: {
     id: 'ptt',
-    images: [],
+    images: ['/images/pttlogo.png'],
     title: 'Full Stack Developer', // Adjust title based on your role specifics
     company: 'PTT Digital Solution',
     period: '2020 Dec - 2023 Aug',
@@ -102,7 +102,7 @@ export const experience: Record<string, Experience> = {
   },
   nhso: {
     id: 'nhso',
-    images: [],
+    images: ['/images/seamless.webp'],
     title: 'Developer',
     company: 'National Health Security Office ( NHSO )',
     period: '2019 Sep - 2020 Oct',
@@ -124,7 +124,7 @@ export const experience: Record<string, Experience> = {
   },
   jury: {
     id: 'jury',
-    images: [],
+    images: ['/images/smartfin.webp'],
     title: 'Developer',
     company: 'Juryberry Co., Ltd.',
     period: '2018 Aug - 2019 Aug',

@@ -15,6 +15,41 @@ function CommonCarousel({
   slides: string[];
   className?: string;
 }) {
+  const valid = slides.filter(Boolean);
+  if (valid.length === 0) return null;
+  return valid.length > 1 ? (
+    <CommonCarouselMulti slides={valid} className={className} />
+  ) : (
+    <CommonCarouselSingle src={valid[0]} className={className} />
+  );
+}
+
+function CommonCarouselSingle({
+  src,
+  className,
+}: {
+  src: string;
+  className?: string;
+}) {
+  return (
+    <div className='relative aspect-video w-full overflow-hidden rounded-lg'>
+      <Image
+        src={src}
+        alt={`slide-1`}
+        fill
+        className={cn('object-contain', className)}
+      />
+    </div>
+  );
+}
+
+function CommonCarouselMulti({
+  slides,
+  className,
+}: {
+  slides: string[];
+  className?: string;
+}) {
   return (
     <CarouselUI className={cn('w-full', className)}>
       <CarouselContent>

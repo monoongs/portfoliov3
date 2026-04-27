@@ -36,7 +36,13 @@ async function ProjectPage({
       <div className='grid grid-cols-2 gap-4'>
         {[
           { label: 'Period', value: period },
-          { label: 'Duration', value: `${years} years ${months} months` },
+          {
+            label: 'Duration',
+            value:
+              years > 0
+                ? `${years} years ${months} months`
+                : `${months} months`,
+          },
           { label: 'Role', value: title },
           { label: 'Tools', value: tools.join(', ') },
         ].map(({ label, value }) => (
