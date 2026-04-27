@@ -6,8 +6,8 @@ import { Button } from '@/components/ui/button';
 
 function Footer() {
   return (
-    <div className='bg-[#ececed] w-screen -mx-10 py-5'>
-      <div className='mx-10 flex flex-col'>
+    <div className='bg-[#ececed] -mx-10 px-10 py-5'>
+      <div className='flex flex-col'>
         <h4 className='text-xl font-bold uppercase'>Want to work together ?</h4>
         <p className='text-xl font-bold uppercase'>Let&apos;s talk at</p>
         <Link
