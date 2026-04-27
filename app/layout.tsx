@@ -31,7 +31,7 @@ export default function RootLayout({
     >
       <body className='min-h-full flex flex-col bg-gray-100'>
         <div className='max-w-3xl mx-auto'>
-          <div className='bg-white'>
+          <div className='bg-white shadow-xl'>
             <div className='px-10'>
               <Navbar />
               {children}
