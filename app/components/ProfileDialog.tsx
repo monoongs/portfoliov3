@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { profile } from '@/app/config';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { FiDownload, FiMail } from 'react-icons/fi';
+import Link from 'next/link';
 
 function ProfileDialog() {
   return (
@@ -39,23 +40,27 @@ function ProfileContent() {
         </div>
 
         <div className='flex flex-col items-center gap-1'>
-          <a href={`mailto:${profile.email}`}>
+          <Link href={`mailto:${profile.email}`}>
             <FiMail size={iconSize} className='text-black' />
-          </a>
+          </Link>
           <span className='text-xs font-bold uppercase'>Email</span>
         </div>
 
         <div className='flex flex-col items-center gap-1'>
-          <a href={profile.linkedin} target='_blank' rel='noopener noreferrer'>
+          <Link
+            href={profile.linkedin}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <FaLinkedin size={iconSize} className='text-black' />
-          </a>
+          </Link>
           <span className='text-xs font-bold uppercase'>LinkedIn</span>
         </div>
 
         <div className='flex flex-col items-center gap-1'>
-          <a href={profile.github} target='_blank' rel='noopener noreferrer'>
+          <Link href={profile.github} target='_blank' rel='noopener noreferrer'>
             <FaGithub size={iconSize} className='text-black' />
-          </a>
+          </Link>
           <span className='text-xs font-bold uppercase'>Github</span>
         </div>
       </div>

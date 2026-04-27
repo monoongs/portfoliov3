@@ -1,5 +1,6 @@
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { FiDownload } from 'react-icons/fi';
+import Link from 'next/link';
 import { profile } from '@/app/config';
 import { Button } from '@/components/ui/button';
 
@@ -9,12 +10,12 @@ function Footer() {
       <div className='mx-10 flex flex-col'>
         <h4 className='text-xl font-bold uppercase'>Want to work together ?</h4>
         <p className='text-xl font-bold uppercase'>Let&apos;s talk at</p>
-        <a
+        <Link
           href={`mailto:${profile.email}`}
           className='text-xl font-semibold underline uppercase mt-2'
         >
           {profile.email}
-        </a>
+        </Link>
         <div className='flex gap-4 mt-5 items-center'>
           <Button variant='outline' className='rounded-full text-xs font-bold'>
             <FiDownload size={16} /> GET MY CV
@@ -27,13 +28,13 @@ function Footer() {
             className='rounded-full text-xs font-bold'
             asChild
           >
-            <a
+            <Link
               href={profile.linkedin}
               target='_blank'
               rel='noopener noreferrer'
             >
               <FaLinkedin size={16} className='text-black' />
-            </a>
+            </Link>
           </Button>
 
           <Button
@@ -41,9 +42,13 @@ function Footer() {
             className='rounded-full text-xs font-bold'
             asChild
           >
-            <a href={profile.github} target='_blank' rel='noopener noreferrer'>
+            <Link
+              href={profile.github}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <FaGithub size={16} className='text-black' />
-            </a>
+            </Link>
           </Button>
         </div>
 
