@@ -1,0 +1,67 @@
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { profile } from '@/app/config';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FiDownload, FiMail } from 'react-icons/fi';
+
+function ProfileDialog() {
+  return (
+    <Dialog>
+      <DialogTrigger asChild>
+        <Button variant='outline' className='rounded-full text-xs font-bold'>
+          Get In Touch
+        </Button>
+      </DialogTrigger>
+      <DialogContent className='max-w-2xl bg-white'>
+        <DialogHeader>
+          <DialogTitle>&nbsp;</DialogTitle>
+        </DialogHeader>
+        <ProfileContent />
+      </DialogContent>
+    </Dialog>
+  );
+}
+
+function ProfileContent() {
+  const iconSize = 40;
+  return (
+    <div className='flex flex-col'>
+      <div className='flex mt-5 gap-10 justify-center'>
+        <div className='flex flex-col items-center gap-1'>
+          <FiDownload size={iconSize} />
+          <span className='text-xs font-bold uppercase'>Get my CV</span>
+        </div>
+
+        <div className='flex flex-col items-center gap-1'>
+          <a href={`mailto:${profile.email}`}>
+            <FiMail size={iconSize} className='text-black' />
+          </a>
+          <span className='text-xs font-bold uppercase'>Email</span>
+        </div>
+
+        <div className='flex flex-col items-center gap-1'>
+          <a href={profile.linkedin} target='_blank' rel='noopener noreferrer'>
+            <FaLinkedin size={iconSize} className='text-black' />
+          </a>
+          <span className='text-xs font-bold uppercase'>LinkedIn</span>
+        </div>
+
+        <div className='flex flex-col items-center gap-1'>
+          <a href={profile.github} target='_blank' rel='noopener noreferrer'>
+            <FaGithub size={iconSize} className='text-black' />
+          </a>
+          <span className='text-xs font-bold uppercase'>Github</span>
+        </div>
+      </div>
+      <h5 className='text-4xl uppercase font-bold mt-5'>{profile.name}</h5>
+    </div>
+  );
+}
+
+export default ProfileDialog;

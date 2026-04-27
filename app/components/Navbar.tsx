@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+import ProfileDialog from '@/app/components/ProfileDialog';
 
 function Navbar() {
   return (
@@ -7,9 +7,7 @@ function Navbar() {
         <h1 className='text-md font-bold'>NATTAPON.DEV</h1>
       </div>
       <div>
-        <Button variant='outline' className='rounded-full text-xs font-bold'>
-          Get In Touch
-        </Button>
+        <ProfileDialog />
       </div>
     </div>
   );

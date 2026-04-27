@@ -1,7 +1,7 @@
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FiDownload } from 'react-icons/fi';
 import { profile } from '@/app/config';
 import { Button } from '@/components/ui/button';
-import { FiDownload } from 'react-icons/fi';
 
 function Footer() {
   return (
