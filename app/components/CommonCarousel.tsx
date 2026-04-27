@@ -60,7 +60,7 @@ function CommonCarouselMulti({
                 src={src}
                 alt={`slide-${i + 1}`}
                 fill
-                className='object-cover'
+                className='object-contain'
               />
             </div>
           </CarouselItem>

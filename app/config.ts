@@ -24,7 +24,7 @@ export type Profile = {
 export const experience: Record<string, Experience> = {
   bedrock: {
     id: 'bedrock',
-    images: ['/images/bedrockjob.webp', '/images/bedrockjob1.webp'],
+    images: ['/images/newbedrock1.webp', '/images/newbedrock2.webp'],
     title: 'Senior Full Stack Developer',
     company: 'Bedrock Analytics (AI and Robotics Ventures)',
     period: '2024 Jan - 2026 March',
