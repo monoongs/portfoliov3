@@ -1,4 +1,4 @@
-import { experience as Config } from '@/app/config';
+import { profile } from '@/app/config';
 import CommonCarousel from '@/app/components/CommonCarousel';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -9,7 +9,7 @@ type CommonExperienceProps = {
 };
 
 function CommonExperience({ experienceId }: CommonExperienceProps) {
-  const experience = Config[experienceId];
+  const experience = profile.experience[experienceId];
 
   const slides = experience.images;
 
@@ -29,6 +29,16 @@ function CommonExperience({ experienceId }: CommonExperienceProps) {
             {experience.highlights.map((highlight, i) => (
               <li key={i}>
                 <p>{highlight}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <ul className='flex flex-wrap gap-2'>
+            {experience.tools.map((tool, i) => (
+              <li key={i}>
+                <Badge variant='outline'>{tool}</Badge>
               </li>
             ))}
           </ul>

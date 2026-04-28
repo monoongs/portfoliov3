@@ -1,4 +1,4 @@
-import { experience } from '@/app/config';
+import { profile } from '@/app/config';
 import CommonCarousel from '@/app/components/CommonCarousel';
 import { notFound } from 'next/navigation';
 import BackButton from '@/app/components/BackButton';
@@ -9,7 +9,7 @@ async function ProjectPage({
   params: Promise<{ projectId: string }>;
 }) {
   const { projectId } = await params;
-  const project = experience[projectId];
+  const project = profile.experience[projectId];
 
   if (!project) notFound();
 
