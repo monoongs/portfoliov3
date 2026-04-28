@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/app/components/Navbar';
 import { profile } from '@/app/config';
+import { Analytics } from '@vercel/analytics/next';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -31,15 +32,16 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased overflow-x-hidden`}
     >
       <body className='min-h-full flex flex-col bg-gray-100 overflow-x-hidden'>
-        <div className='max-w-3xl mx-auto'>
-          <div className='bg-white shadow-[20px_0_25px_-5px_rgb(0_0_0/0.1),-20px_0_25px_-5px_rgb(0_0_0/0.1)] [clip-path:inset(0_-30px)]'>
-            <div className='px-10'>
-              <Navbar />
-              {children}
+          <div className='max-w-3xl mx-auto'>
+            <div className='bg-white shadow-[20px_0_25px_-5px_rgb(0_0_0/0.1),-20px_0_25px_-5px_rgb(0_0_0/0.1)] [clip-path:inset(0_-30px)]'>
+              <div className='px-10'>
+                <Navbar />
+                {children}
+              </div>
             </div>
           </div>
-        </div>
-      </body>
+          <Analytics />
+        </body>
     </html>
   );
 }
