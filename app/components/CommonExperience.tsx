@@ -34,6 +34,16 @@ function CommonExperience({ experienceId }: CommonExperienceProps) {
           </ul>
         </div>
 
+        <div>
+          <ul className='flex flex-wrap gap-2'>
+            {experience.tools.map((tool, i) => (
+              <li key={i}>
+                <Badge variant='outline'>{tool}</Badge>
+              </li>
+            ))}
+          </ul>
+        </div>
+
         <Link href={`/projects/${experience.id}`}>
           <Button
             variant='outline'
