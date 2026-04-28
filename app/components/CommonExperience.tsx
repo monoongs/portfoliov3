@@ -1,4 +1,4 @@
-import { experience as Config } from '@/app/config';
+import { profile } from '@/app/config';
 import CommonCarousel from '@/app/components/CommonCarousel';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -9,7 +9,7 @@ type CommonExperienceProps = {
 };
 
 function CommonExperience({ experienceId }: CommonExperienceProps) {
-  const experience = Config[experienceId];
+  const experience = profile.experience[experienceId];
 
   const slides = experience.images;
 
