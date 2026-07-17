@@ -25,6 +25,31 @@ async function ProjectPage({
     responsibilities,
   } = project;
 
+  const getDuration = () => {
+    // * Past jobs
+    if (years > 0 || months > 0) {
+      return years > 0 ? `${years} years ${months} months` : `${months} months`;
+    }
+
+    // * Current job
+    // *  e.g. "2026 May"
+    const startText = period.split(' - ')[0];
+    const startDate = new Date(`${startText} 1`);
+    const now = new Date();
+
+    let diffYears = now.getFullYear() - startDate.getFullYear();
+    let diffMonths = now.getMonth() - startDate.getMonth();
+
+    if (diffMonths < 0) {
+      diffYears--;
+      diffMonths += 12;
+    }
+
+    return diffYears > 0
+      ? `${diffYears} years ${diffMonths} months`
+      : `${diffMonths} months`;
+  };
+
   return (
     <div className='flex flex-col gap-6 w-full pt-28 pb-10'>
       <CommonCarousel slides={images} />
@@ -38,10 +63,7 @@ async function ProjectPage({
           { label: 'Period', value: period },
           {
             label: 'Duration',
-            value:
-              years > 0
-                ? `${years} years ${months} months`
-                : `${months} months`,
+            value: getDuration(),
           },
           { label: 'Role', value: title },
           { label: 'Tools', value: tools.join(', ') },
@@ -65,6 +87,7 @@ async function ProjectPage({
           ))}
         </ul>
       </div>
+
       <BackButton className='w-full' />
     </div>
   );

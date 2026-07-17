@@ -30,9 +30,45 @@ export const profile: Profile = {
   cvUrl:
     'https://drive.google.com/file/d/1DJ2CJTHrfgWHRo8Rvum00eh6NtnFcmtN/view?usp=sharing',
   experience: {
+    fwd: {
+      id: 'fwd',
+      images: ['/images/fwd_logo_2.webp'],
+      title: 'Developer',
+      company: 'FWD LIFE INSURANCE PUBLIC COMPANY LIMITED',
+      period: '2026 May - Present',
+      years: 0,
+      months: 0,
+      tools: [
+        'TypeScript',
+        'Node.js',
+        'AWS Glue',
+        'PySpark',
+        'SOAP',
+        'REST API',
+        'Cucumber',
+        'Jest',
+      ],
+      highlights: [
+        'Developed integration services bridging modern REST APIs and IBM Core insurance systems (LA/IL)',
+        'Designed JSON-to-SOAP and SOAP-to-JSON transformation layers for enterprise applications',
+        'Designed and maintained AWS Glue data platforms with reusable ETL components and automated deployment pipelines',
+      ],
+      description:
+        'Developer responsible for enterprise integration services, backend application development, and AWS Glue data platforms. Focused on bridging modern REST APIs with IBM Core insurance systems (LA/IL), implementing business data transformations, automating deployments, and supporting production operations across cloud environments.',
+      responsibilities: [
+        'Developed integration services bridging modern REST APIs and IBM Core insurance systems (LA/IL).',
+        'Designed and maintained JSON-to-SOAP and SOAP-to-JSON transformation layers for enterprise applications.',
+        'Implemented complex insurance business mappings across policy, client, payment, and submission domains.',
+        'Developed backend services and reusable integration components using TypeScript and Node.js.',
+        'Built automated integration and regression test suites using Cucumber, Jest, and SOAP/API testing tools.',
+        'Designed and maintained AWS Glue data platforms, delivering reusable ETL components, automated deployment pipelines, and operational standards.',
+        'Investigated and resolved production issues across APIs, integrations, cloud infrastructure, and dependent systems.',
+      ],
+      order: 6,
+    },
     bedrock: {
       id: 'bedrock',
-      images: ['/images/newbedrock1.webp', '/images/newbedrock2.webp'],
+      images: ['/images/bedrock_logo.webp'],
       title: 'Senior Full Stack Developer',
       company: 'Bedrock Analytics (AI and Robotics Ventures)',
       period: '2024 Jan - 2026 March',
