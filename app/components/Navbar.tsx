@@ -1,5 +1,8 @@
 import ProfileDialog from '@/app/components/ProfileDialog';
+import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { FiDownload } from 'react-icons/fi';
+import { profile } from '@/app/config';
 
 function Navbar() {
   return (
@@ -10,7 +13,22 @@ function Navbar() {
             <h1 className='text-md font-bold'>NATTAPON.DEV</h1>
           </Link>
         </div>
-        <div>
+        <div className='flex flex-row items-center gap-3'>
+          <Button
+            variant='outline'
+            className='group h-8 px-3 rounded-full text-xs font-bold bg-black text-white hover:bg-white hover:text-black'
+          >
+            <Link
+              href={profile.cvUrl}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='flex items-center gap-2'
+            >
+              <FiDownload className='text-white group-hover:text-black' />
+              Get My CV
+            </Link>
+          </Button>
+
           <ProfileDialog />
         </div>
       </div>
