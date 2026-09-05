@@ -13,10 +13,10 @@ function Navbar() {
             <h1 className='text-md font-bold'>NATTAPON.DEV</h1>
           </Link>
         </div>
-        <div className='flex flex-row items-center gap-3'>
+        <div className='flex flex-col-reverse items-center gap-3 md:flex-row'>
           <Button
             variant='outline'
-            className='group h-8 px-3 rounded-full text-xs font-bold bg-black text-white hover:bg-white hover:text-black'
+            className='group h-8 w-26.25 rounded-full text-xs font-bold bg-black text-white hover:bg-white hover:text-black'
           >
             <Link
               href={profile.cvUrl}
