@@ -13,7 +13,7 @@ function Navbar() {
             <h1 className='text-md font-bold'>NATTAPON.DEV</h1>
           </Link>
         </div>
-        <div className='flex flex-col-reverse items-center gap-3 md:flex-row'>
+        <div className='flex items-center gap-3 flex-row'>
           <Button
             variant='outline'
             className='group h-8 w-26.25 rounded-full text-xs font-bold bg-black text-white hover:bg-white hover:text-black'
@@ -24,7 +24,7 @@ function Navbar() {
               rel='noopener noreferrer'
               className='flex items-center gap-2'
             >
-              <FiDownload className='text-white group-hover:text-black' />
+              <FiDownload className='text-white group-hover:text-black hidden md:block' />
               Get My CV
             </Link>
           </Button>
