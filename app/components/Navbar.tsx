@@ -16,7 +16,8 @@ function Navbar() {
         <div className='flex items-center gap-3 flex-row'>
           <Button
             variant='outline'
-            className='group h-8 w-26.25 rounded-full text-xs font-bold bg-black text-white hover:bg-white hover:text-black'
+            className='group h-8 w-26.25 rounded-full text-xs font-bold md:bg-black md:text-white md:hover:bg-white md:hover:text-black
+            '
           >
             <Link
               href={profile.cvUrl}
