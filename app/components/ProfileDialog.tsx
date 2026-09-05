@@ -15,7 +15,10 @@ function ProfileDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant='outline' className='rounded-full text-xs font-bold'>
+        <Button
+          variant='outline'
+          className='h-8 px-3 rounded-full text-xs font-bold'
+        >
           Get In Touch
         </Button>
       </DialogTrigger>
