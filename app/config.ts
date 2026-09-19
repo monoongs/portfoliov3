@@ -78,7 +78,7 @@ export const profile: Profile = {
       highlights: [
         'Built a multi-tenant government platform with centralized user and role management',
         'Implemented async workflows using Kafka, outbox pattern, and backend APIs with NestJS and Elysia',
-        'Implemented async workflows using Kafka, outbox pattern, and backend APIs with NestJS and Elysia',
+        'Translated Figma designs into reusable UI components (e.g., tables, pagination, forms) and implemented performance optimizations such as lazy loading',
       ],
       description:
         'LocalGov is a multi-tenant web portal for government organizations, supporting RBAC management and integration with multiple internal services. Built with Next.js, Elysia, PostgreSQL, Redis, and Kafka — responsible for both frontend and backend, including feature development, asynchronous workflows, and cross-system integration.',
