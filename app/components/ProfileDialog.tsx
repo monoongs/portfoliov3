@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Dialog,
   DialogTrigger,
@@ -9,6 +11,9 @@ import { Button } from '@/components/ui/button';
 import { profile } from '@/app/config';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { FiDownload, FiMail } from 'react-icons/fi';
+import { track } from '@vercel/analytics';
+import { ANALYTIC_TARGET } from '@/app/definations/analytic';
+
 import Link from 'next/link';
 
 function ProfileDialog() {
@@ -16,14 +21,15 @@ function ProfileDialog() {
     <Dialog>
       <DialogTrigger asChild>
         <Button
-          variant='outline'
-          className='h-8 w-26.25 rounded-full text-xs font-bold hidden md:block'
+          variant="outline"
+          className="h-8 w-26.25 rounded-full text-xs font-bold hidden md:block"
+          onClick={() => track(ANALYTIC_TARGET.GET_IN_TOUCH)}
         >
           Get In Touch
         </Button>
       </DialogTrigger>
       <DialogContent
-        className='bg-white md:max-w-2xl'
+        className="bg-white md:max-w-2xl"
         aria-describedby={undefined}
       >
         <DialogHeader>
@@ -38,42 +44,56 @@ function ProfileDialog() {
 function ProfileContent() {
   const iconSize = 40;
   return (
-    <div className='flex flex-col'>
-      <div className='flex mt-5 gap-8 justify-center md:gap-10'>
-        <div className='flex flex-col items-center gap-1'>
-          <Link href={profile.cvUrl} target='_blank' rel='noopener noreferrer'>
-            <FiDownload size={iconSize} className='text-black' />
+    <div className="flex flex-col">
+      <div className="flex mt-5 gap-8 justify-center md:gap-10">
+        <div className="flex flex-col items-center gap-1">
+          <Link
+            href={profile.cvUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => track(ANALYTIC_TARGET.CV_DOWNLOAD)}
+          >
+            <FiDownload size={iconSize} className="text-black" />
           </Link>
-          <span className='text-xs font-bold uppercase'>Get my CV</span>
+          <span className="text-xs font-bold uppercase">Get my CV</span>
         </div>
 
-        <div className='flex flex-col items-center gap-1'>
-          <Link href={`mailto:${profile.email}`}>
-            <FiMail size={iconSize} className='text-black' />
+        <div className="flex flex-col items-center gap-1">
+          <Link
+            href={`mailto:${profile.email}`}
+            onClick={() => track(ANALYTIC_TARGET.EMAIL_CLICK)}
+          >
+            <FiMail size={iconSize} className="text-black" />
           </Link>
-          <span className='text-xs font-bold uppercase'>Email</span>
+          <span className="text-xs font-bold uppercase">Email</span>
         </div>
 
-        <div className='flex flex-col items-center gap-1'>
+        <div className="flex flex-col items-center gap-1">
           <Link
             href={profile.linkedin}
-            target='_blank'
-            rel='noopener noreferrer'
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => track(ANALYTIC_TARGET.LINKEDIN_CLICK)}
           >
-            <FaLinkedin size={iconSize} className='text-black' />
+            <FaLinkedin size={iconSize} className="text-black" />
           </Link>
-          <span className='text-xs font-bold uppercase'>LinkedIn</span>
+          <span className="text-xs font-bold uppercase">LinkedIn</span>
         </div>
 
-        <div className='flex flex-col items-center gap-1'>
-          <Link href={profile.github} target='_blank' rel='noopener noreferrer'>
-            <FaGithub size={iconSize} className='text-black' />
+        <div className="flex flex-col items-center gap-1">
+          <Link
+            href={profile.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => track(ANALYTIC_TARGET.GITHUB_CLICK)}
+          >
+            <FaGithub size={iconSize} className="text-black" />
           </Link>
-          <span className='text-xs font-bold uppercase'>Github</span>
+          <span className="text-xs font-bold uppercase">Github</span>
         </div>
       </div>
-      <div className='flex md:justify-center'>
-        <h5 className='text-4xl uppercase font-bold mt-5'>{profile.name}</h5>
+      <div className="flex md:justify-center">
+        <h5 className="text-4xl uppercase font-bold mt-5">{profile.name}</h5>
       </div>
     </div>
   );
