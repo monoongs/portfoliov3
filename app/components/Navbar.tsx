@@ -1,31 +1,45 @@
+'use client';
+
 import ProfileDialog from '@/app/components/ProfileDialog';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { FiDownload } from 'react-icons/fi';
 import { profile } from '@/app/config';
+import { track } from '@vercel/analytics';
+import { ANALYTIC_TARGET } from '@/app/definations/analytic';
 
 function Navbar() {
   return (
-    <div className='fixed top-0 left-0 right-0 z-50'>
-      <div className='max-w-3xl mx-auto px-10 flex justify-between items-center py-5 bg-white'>
+    <div className="fixed top-0 left-0 right-0 z-50">
+      <div className="max-w-3xl mx-auto px-10 flex justify-between items-center py-5 bg-white">
         <div>
-          <Link href='/' className='hover:underline'>
-            <h1 className='text-md font-bold'>NATTAPON.DEV</h1>
+          <Link
+            href="/"
+            className="hover:underline"
+            onClick={(event) => {
+              if (window.location.pathname !== '/') return;
+
+              event.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          >
+            <h1 className="text-md font-bold">NATTAPON.DEV</h1>
           </Link>
         </div>
-        <div className='flex items-center gap-3 flex-row'>
+        <div className="flex items-center gap-3 flex-row">
           <Button
-            variant='outline'
-            className='group h-8 w-26.25 rounded-full text-xs font-bold md:bg-black md:text-white md:hover:bg-white md:hover:text-black
-            '
+            variant="outline"
+            className="group h-8 w-26.25 rounded-full text-xs font-bold md:bg-black md:text-white md:hover:bg-white md:hover:text-black
+            "
           >
             <Link
               href={profile.cvUrl}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='flex items-center gap-2'
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2"
+              onClick={() => track(ANALYTIC_TARGET.CV_DOWNLOAD)}
             >
-              <FiDownload className='text-white group-hover:text-black hidden md:block' />
+              <FiDownload className="text-white group-hover:text-black hidden md:block" />
               Get My CV
             </Link>
           </Button>
